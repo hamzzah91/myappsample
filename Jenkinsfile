@@ -10,7 +10,7 @@ pipeline {
         }
       }
       stage("test") {
-        
+                echo "Database engine is ${BRANCH_NAME}"        
         when {
           expression {
             BRANCH_NAME == 'main'
