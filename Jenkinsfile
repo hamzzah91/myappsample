@@ -14,7 +14,7 @@ pipeline {
         echo "${BRANCH_NAME}"
         when {
           expression {
-            BRANCH_NAME == 'dev'
+            BRANCH_NAME == 'main'
           }
         }
         steps {
