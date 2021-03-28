@@ -11,16 +11,14 @@ pipeline {
       }
       stage("test") {
         
-        echo "${BRANCH_NAME}"
         when {
           expression {
-            BRANCH_NAME == 'main'
+            BRANCH_NAME == 'dev'
           }
         }
         steps {
           echo 'testing the application ... '
                     echo 'tested ... '
-
         }
       }
       stage("deploy") {
